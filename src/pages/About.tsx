@@ -85,9 +85,11 @@ const About = () => {
                   "To create a welcoming space where nostalgia meets imagination, and to provide quality toys and trains that inspire creativity and bring joy to collectors and families alike."
                 </p>
                 <div className="flex justify-center">
-                  <CustomButton as={Link} to="/contact">
-                    Get in Touch
-                  </CustomButton>
+                  <Link to="/contact">
+                    <CustomButton>
+                      Get in Touch
+                    </CustomButton>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -152,12 +154,16 @@ const About = () => {
                   Experience the magic of Berwyn's Toys & Trains in person. Browse our collection, ask questions, and find your next treasure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <CustomButton as={Link} to="/shop">
-                    Explore Our Products
-                  </CustomButton>
-                  <CustomButton variant="outline" as={Link} to="/find-us">
-                    Get Directions
-                  </CustomButton>
+                  <Link to="/shop">
+                    <CustomButton>
+                      Explore Our Products
+                    </CustomButton>
+                  </Link>
+                  <Link to="/find-us">
+                    <CustomButton variant="outline">
+                      Get Directions
+                    </CustomButton>
+                  </Link>
                 </div>
               </div>
             </div>

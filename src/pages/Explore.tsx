@@ -169,9 +169,11 @@ const Explore = () => {
                     <p className="mb-6 text-train-black/80">
                       Interested in hosting a workshop, club meeting, or special event at our store? We'd love to collaborate with you!
                     </p>
-                    <CustomButton as={Link} to="/contact">
-                      Contact Us
-                    </CustomButton>
+                    <Link to="/contact">
+                      <CustomButton>
+                        Contact Us
+                      </CustomButton>
+                    </Link>
                   </div>
                 </div>
               </div>
