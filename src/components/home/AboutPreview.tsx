@@ -95,9 +95,11 @@ const AboutPreview = () => {
               </p>
             </div>
             
-            <CustomButton variant="secondary" size="lg" as={Link} to="/about">
-              Read Our Full Story
-            </CustomButton>
+            <Link to="/about">
+              <CustomButton variant="secondary" size="lg">
+                Read Our Full Story
+              </CustomButton>
+            </Link>
           </motion.div>
         </div>
       </div>

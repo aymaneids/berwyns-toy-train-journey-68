@@ -5,7 +5,14 @@ import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CustomButton } from '@/components/ui/CustomButton';
 
-const InfoCard = ({ icon, title, children, delay = 0 }) => {
+interface InfoCardProps {
+  icon: React.ReactNode;
+  title: string;
+  children: React.ReactNode;
+  delay?: number;
+}
+
+const InfoCard = ({ icon, title, children, delay = 0 }: InfoCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -115,9 +122,11 @@ const StoreInfo = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <CustomButton variant="outline" size="lg" as={Link} to="/contact">
-            Contact Us
-          </CustomButton>
+          <Link to="/contact">
+            <CustomButton variant="outline" size="lg">
+              Contact Us
+            </CustomButton>
+          </Link>
         </div>
       </div>
     </section>

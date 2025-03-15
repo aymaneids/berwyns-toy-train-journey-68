@@ -36,12 +36,16 @@ const Hero = () => {
             Step into Berwyn's Toys & Trains, where nostalgia meets imagination. Discover quality model trains, classic toys, and a community of enthusiasts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <CustomButton size="lg" as={Link} to="/shop">
-              Explore Collection
-            </CustomButton>
-            <CustomButton variant="outline" size="lg" as={Link} to="/find-us">
-              Visit Our Store
-            </CustomButton>
+            <Link to="/shop">
+              <CustomButton size="lg">
+                Explore Collection
+              </CustomButton>
+            </Link>
+            <Link to="/find-us">
+              <CustomButton variant="outline" size="lg">
+                Visit Our Store
+              </CustomButton>
+            </Link>
           </div>
         </motion.div>
         
