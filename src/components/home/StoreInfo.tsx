@@ -25,18 +25,18 @@ const InfoCard = ({ icon, title, children, delay = 0 }: InfoCardProps) => {
 
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-md p-6 border border-wood/20"
+      className="bg-white rounded-lg shadow-md p-6 border border-purple-100"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
       transition={{ duration: 0.5 }}
     >
       <div className="flex items-start">
-        <div className="mr-4 p-3 bg-train-blue/10 rounded-full text-train-blue">
+        <div className="mr-4 p-3 bg-purple-100 rounded-full text-purple-600">
           {icon}
         </div>
         <div>
-          <h3 className="text-lg font-medium text-train-black mb-2">{title}</h3>
-          <div className="text-train-black/70 text-sm">{children}</div>
+          <h3 className="text-lg font-medium text-gray-800 mb-2">{title}</h3>
+          <div className="text-gray-600 text-sm">{children}</div>
         </div>
       </div>
     </motion.div>
@@ -45,17 +45,17 @@ const InfoCard = ({ icon, title, children, delay = 0 }: InfoCardProps) => {
 
 const StoreInfo = () => {
   return (
-    <section className="section-padding bg-wood/10 relative">
+    <section className="section-padding bg-purple-50 relative">
       <div className="absolute inset-0 bg-paper-texture opacity-30"></div>
       
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <span className="inline-block px-3 py-1 mb-3 text-xs font-medium bg-wood/20 text-train-red rounded-full">
+          <span className="inline-block px-3 py-1 mb-3 text-xs font-medium bg-purple-100 text-purple-600 rounded-full">
             Visit Us
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-train-black">Location & Hours</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-train-black/70">
-            We're conveniently located in Berwyn, IL. Stop by to explore our collection and experience the magic of our store in person.
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Location & Hours</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-gray-600">
+            We're conveniently located in Uptown Chicago. Stop by to explore our collection and experience the magic of our store in person.
           </p>
         </div>
         
@@ -65,10 +65,10 @@ const StoreInfo = () => {
             title="Our Location" 
             delay={100}
           >
-            <p className="mb-3">7025 Ogden Ave. Berwyn, IL 60402</p>
+            <p className="mb-3">4523 N Broadway, Chicago, IL 60640</p>
             <Link 
               to="/find-us" 
-              className="inline-flex items-center text-train-blue hover:text-train-blue/80 font-medium"
+              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
             >
               Get Directions
               <ArrowRight className="h-4 w-4 ml-1" />
@@ -80,11 +80,11 @@ const StoreInfo = () => {
             title="Contact Us" 
             delay={200}
           >
-            <p>Phone: 708-484-4384</p>
-            <p className="mb-3">Email: info@berwynstoysandtrains.com</p>
+            <p>Phone: 773-555-1234</p>
+            <p className="mb-3">Email: info@celltoyscollectibles.com</p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center text-train-blue hover:text-train-blue/80 font-medium"
+              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium"
             >
               Send a Message
               <ArrowRight className="h-4 w-4 ml-1" />
@@ -98,24 +98,20 @@ const StoreInfo = () => {
           >
             <ul className="space-y-1">
               <li className="flex justify-between">
-                <span>Monday - Wednesday:</span>
-                <span>10:00 AM - 6:00 PM</span>
+                <span>Monday - Friday:</span>
+                <span>11:00 AM - 7:00 PM</span>
               </li>
               <li className="flex justify-between">
                 <span>Thursday:</span>
-                <span>10:00 AM - 8:00 PM</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Friday:</span>
-                <span>10:00 AM - 6:00 PM</span>
+                <span>11:00 AM - 8:00 PM</span>
               </li>
               <li className="flex justify-between">
                 <span>Saturday:</span>
-                <span>10:00 AM - 5:00 PM</span>
+                <span>10:00 AM - 6:00 PM</span>
               </li>
               <li className="flex justify-between">
                 <span>Sunday:</span>
-                <span>Closed</span>
+                <span>12:00 PM - 5:00 PM</span>
               </li>
             </ul>
           </InfoCard>

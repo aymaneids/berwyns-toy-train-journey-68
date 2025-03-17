@@ -25,18 +25,18 @@ const Hero = () => {
           animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <span className="inline-block px-3 py-1 mb-4 text-xs font-medium bg-wood/20 text-train-red rounded-full animate-fade-in">
-            Your Destination for Classic Toys and Model Trains
+          <span className="inline-block px-3 py-1 mb-4 text-xs font-medium bg-purple-100 text-purple-600 rounded-full animate-fade-in">
+            Your Premier Destination for Collectible Toys in Chicago
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-train-black">
-            A World of Wonder <br className="hidden md:block" />
-            <span className="text-train-red">Awaits You</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-800">
+            Discover Rare <br className="hidden md:block" />
+            <span className="text-purple-600">Collectibles</span>
           </h1>
-          <p className="text-lg mb-8 text-train-black/80 max-w-xl mx-auto lg:mx-0">
-            Step into Berwyn's Toys & Trains, where nostalgia meets imagination. Discover quality model trains, classic toys, and a community of enthusiasts.
+          <p className="text-lg mb-8 text-gray-600 max-w-xl mx-auto lg:mx-0">
+            Step into Cell-Toys Collectibles, where nostalgia meets rarity. Explore our curated selection of action figures, limited editions, and collectible treasures.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Link to="/shop">
+            <Link to="/explore">
               <CustomButton size="lg">
                 Explore Collection
               </CustomButton>
@@ -58,33 +58,22 @@ const Hero = () => {
         >
           <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-lg shadow-xl">
             <img
-              src="/hero-train.jpg"
-              alt="Classic model train layout in Berwyn's Toys & Trains"
+              src="/hero-collectibles.jpg"
+              alt="Rare collectible toys display at Cell-Toys Collectibles"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-train-black/20 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
           </div>
           
           {/* Decorative Elements */}
-          <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-train-red rounded-full opacity-30 blur-xl"></div>
-          <div className="absolute -top-6 -right-6 w-32 h-32 bg-train-blue rounded-full opacity-20 blur-xl"></div>
+          <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-purple-500 rounded-full opacity-30 blur-xl"></div>
+          <div className="absolute -top-6 -right-6 w-32 h-32 bg-indigo-500 rounded-full opacity-20 blur-xl"></div>
           
           {/* Stats or Featured Label */}
-          <div className="absolute -bottom-5 right-10 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg border border-wood/20">
-            <p className="text-sm font-medium text-train-black">Serving Berwyn Since 1990</p>
+          <div className="absolute -bottom-5 right-10 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-lg shadow-lg border border-purple-100">
+            <p className="text-sm font-medium text-gray-800">Serving Collectors Since 2010</p>
           </div>
         </motion.div>
-      </div>
-      
-      {/* Decorative Train Track */}
-      <div className="absolute bottom-0 left-0 w-full h-8 bg-train-black/80 z-0">
-        <div className="flex justify-center items-center h-full">
-          <div className="w-full h-2 bg-wood-dark flex items-center justify-between px-4">
-            {[...Array(30)].map((_, i) => (
-              <div key={i} className="w-4 h-4 bg-wood border-t-2 border-train-black/60"></div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

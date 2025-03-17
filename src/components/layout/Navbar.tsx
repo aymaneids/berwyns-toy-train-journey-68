@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingBag, Train } from 'lucide-react';
+import { Menu, X, ShoppingBag, Gamepad2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Shop', path: '/shop' },
+    { name: 'Reviews', path: '/reviews' },
     { name: 'Explore', path: '/explore' },
     { name: 'Contact', path: '/contact' },
     { name: 'Find Us', path: '/find-us' },
@@ -50,12 +50,12 @@ const Navbar = () => {
           <Link 
             to="/" 
             className="flex items-center gap-2 z-50"
-            aria-label="Berwyn's Toys & Trains"
+            aria-label="Cell-Toys Collectibles"
           >
-            <Train className="h-8 w-8 text-train-red" />
+            <Gamepad2 className="h-8 w-8 text-purple-600" />
             <div className="flex flex-col">
-              <span className="text-xl font-display font-bold text-train-black">Berwyn's</span>
-              <span className="text-xs text-train-black/80 -mt-1">Toys & Trains</span>
+              <span className="text-xl font-display font-bold text-gray-800">Cell-Toys</span>
+              <span className="text-xs text-gray-700 -mt-1">Collectibles</span>
             </div>
           </Link>
 
@@ -68,14 +68,14 @@ const Navbar = () => {
                 className={cn(
                   "px-3 py-2 rounded-md text-sm font-medium transition-colors relative group",
                   isActive(item.path)
-                    ? "text-train-red"
-                    : "text-train-black hover:text-train-red"
+                    ? "text-purple-600"
+                    : "text-gray-800 hover:text-purple-600"
                 )}
               >
                 {item.name}
                 <span 
                   className={cn(
-                    "absolute bottom-0 left-0 w-full h-0.5 bg-train-red transform origin-bottom-right transition-transform duration-300 ease-out",
+                    "absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform origin-bottom-right transition-transform duration-300 ease-out",
                     isActive(item.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100 group-hover:origin-bottom-left"
                   )}
                 />
@@ -90,9 +90,9 @@ const Navbar = () => {
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? (
-              <X className="h-6 w-6 text-train-black" />
+              <X className="h-6 w-6 text-gray-800" />
             ) : (
-              <Menu className="h-6 w-6 text-train-black" />
+              <Menu className="h-6 w-6 text-gray-800" />
             )}
           </button>
 
@@ -111,8 +111,8 @@ const Navbar = () => {
                   className={cn(
                     "px-5 py-3 text-lg font-medium transition-colors",
                     isActive(item.path)
-                      ? "text-train-red"
-                      : "text-train-black hover:text-train-red"
+                      ? "text-purple-600"
+                      : "text-gray-800 hover:text-purple-600"
                   )}
                 >
                   {item.name}
